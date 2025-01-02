@@ -18,7 +18,7 @@ import {
   import { NATIVE_MINT, TOKEN_2022_PROGRAM_ID } from '@solana/spl-token'
   import dotenv from 'dotenv'
   
-  dotenv.config() // Load environment variables
+  dotenv.config()
   
   /************************************************
    * Interfaces & Globals
@@ -58,23 +58,18 @@ import {
   // A small buffer for transaction fees
   const FEE_BUFFER_SOL = 0.005
   
-  // Create Solana connection
   const connection = new Connection(RPC_ENDPOINT, {
     commitment: 'confirmed',
   })
   
-  /************************************************
-   * initRaydium: Loads the Raydium SDK
-   ************************************************/
+
   async function initRaydium() {
     if (!WALLETS.length) {
       throw new Error('No wallets available for initialization.')
     }
   
-    // Use the first wallet as “owner” for Raydium
     const owner = Keypair.fromSecretKey(WALLETS[0].secretKey)
   
-    // Optional: Adjust log level for debugging
     setLoggerLevel('Raydium_tradeV2', LogLevel.Debug)
   
     raydium = await Raydium.load({

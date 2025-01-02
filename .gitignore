@@ -1,0 +1,60 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+
+# TypeScript
+*.tsbuildinfo
+
+# Build outputs
+dist/
+build/
+out/
+tmp/
+
+# IDE and Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Generated files
+*.bak
+*.tmp
+*.cache
+
+# Solana-specific
+.solana/
+*.keypair.json
+
+# MacOS metadata
+._*
+
+# Debugging output
+*.trace
+*.dmp
+
+# Coverage reports
+coverage/
+
+# Lock files
+.lock-wscript
+.lock-staging
+.lock-git
